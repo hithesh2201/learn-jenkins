@@ -1,8 +1,8 @@
 pipeline {
-//    agent {
-//         label 'agent-1'
-//     }
-    agent any
+   agent {
+        label 'agent-1'
+    }
+    // agent any
     parameters {
         choice(name: 'ENVIRONMENT', choices: ['dev', 'qa', 'prod'], description: 'Select the deployment environment')
         string(name: 'VERSION', defaultValue: '1.0', description: 'Specify the application version')
