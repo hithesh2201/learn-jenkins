@@ -10,7 +10,8 @@ pipeline {
 
     options {
         timeout(time: 1, unit: 'HOURS') // Set a timeout for the entire pipeline
-        buildDiscarder(logRotator(numToKeepStr: '10')) // Keep only the last 10 builds
+        ansiColor("xterm")
+
     }
 
     stages {
